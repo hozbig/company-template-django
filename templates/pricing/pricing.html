@@ -1,0 +1,158 @@
+{% extends 'bases/base-templates.html' %}
+{% load static %}
+
+        <!-- Pricing section-->
+        {% block first_row %}
+        <section class="bg-light py-5">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder">به اندازه گستردگی کسب و کارت هزینه پرداخت کن</h1>
+                    <p class="lead fw-normal text-muted mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                    </p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <!-- Pricing card free-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">رایگان</div>
+                                <div class="mb-3">
+                                    <span class="display-5 fw-bold">۰</span>
+                                    <span class="text-muted">/تومان</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>۱ کاربر</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        ۵گیگ حافظه
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پروژه های نامحدود
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        دسترسی به انجمن
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        پروژه های نامحدود خصوصی
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        پشتیبانی خصوصی
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        لینک دامین های رایگان
+                                    </li>
+                                    <li class="text-muted">
+                                        <i class="bi bi-x"></i>
+                                        گزارش وضعیت ماهانه
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-outline-primary" href="#!">انتخاب</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing card pro-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    ویژه
+                                </div>
+                                <div class="mb-3">
+                                    <span class="display-5 fw-bold">۵۰۰هزار</span>
+                                    <span class="text-muted">/تومان</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>5 کاربر</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        ۵ گیگ حافظه
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پروژه های نامحدود
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        دسترسی به انجمن
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پروژه های نامحدود خصوصی
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پشتیبانی خصوصی
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        لینک دامین های رایگان
+                                    </li>
+                                    <li class="text-muted">
+                                        <i class="bi bi-x"></i>
+                                        گزارش وضعیت ماهانه
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-primary" href="#!">انتخاب</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing card enterprise-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">حرفه‌ای</div>
+                                <div class="mb-3">
+                                    <span class="display-5 fw-bold">۱میلیون</span>
+                                    <span class="text-muted">/تومان</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>تعداد کاربران نامحدود</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        ۵ گیگ حافظه
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پروژه های نامحدود
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        دسترسی به انجمن
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پروژه های نامحدود خصوصی
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        پشتیبانی خصوصی
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        لینک دامین های رایگان
+                                    </li>
+                                    گزارش وضعیت ماهانه
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-outline-primary" href="#!">انتخاب</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock first_row %}
