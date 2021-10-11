@@ -39,11 +39,11 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'pricing_app:pricing_url' %}">پلن ها</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'faq_app:faq_url' %}">سوالات متداول</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="{% url 'blog_app:blog_home_url' %}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">بلاگ</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                <li><a class="dropdown-item" href="blog-home.html">لیست مقالات</a></li>
-                                <li><a class="dropdown-item" href="blog-post.html">مقاله</a></li>
+                                <li><a class="dropdown-item" href="{% url 'blog_app:blog_home_url' %}">لیست مقالات</a></li>
+                                <li><a class="dropdown-item" href="{% url 'blog_app:blog_post_url' %}">مقاله</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

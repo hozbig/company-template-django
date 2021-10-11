@@ -1,0 +1,110 @@
+{% extends 'bases/base-templates.html' %}
+{% load static %}
+
+        <!-- Page Content-->
+        {% block first_row %}
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-3">
+                        <div class="d-flex align-items-center mt-lg-5 mb-4">
+                            <img class="img-fluid rounded-circle" src="img/1009-50x50.jpg" alt="..." />
+                            <div class="ms-3">
+                                <div class="fw-bold">حض بیگ</div>
+                                <div class="text-muted">اخبار, کسب و کار</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <!-- Post content-->
+                        <article>
+                            <!-- Post header-->
+                            <header class="mb-4">
+                                <!-- Post title-->
+                                <h1 class="fw-bolder mb-1">تیتر مقاله در اینجا قرار میگیرد!</h1>
+                                <!-- Post meta content-->
+                                <div class="text-muted fst-italic mb-2">۱۴۰۰/۶/۶</div>
+                                <!-- Post categories-->
+                                <a class="badge bg-secondary text-decoration-none link-light" href="#!">طراحی وب</a>
+                                <a class="badge bg-secondary text-decoration-none link-light" href="#!">بهترین
+                                    انتخاب</a>
+                            </header>
+                            <!-- Preview image figure-->
+                            <figure class="mb-4"><img class="img-fluid rounded" src="img/575-900x400.jpg" alt="..." />
+                            </figure>
+                            <!-- Post content-->
+                            <section class="mb-5">
+                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                                    که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز .</p>
+                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                                    که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
+                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+                                    که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                                    ابزارهای کاربردی می باشد </p>
+                                <h2 class="fw-bolder mb-4 mt-5">لورم ایپسوم متن ساختگی با تولید سادگی </h2>
+                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                    سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
+                                    هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
+                                    آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
+                            </section>
+                        </article>
+                        <!-- Comments section-->
+                        <section>
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <!-- Comment form-->
+                                    <form class="mb-4"><textarea class="form-control" rows="3"
+                                            placeholder="یه پیام بزار تا به گفتگو وارد بشی!"></textarea></form>
+                                    <!-- Comment with nested comments-->
+                                    <div class="d-flex mb-4">
+                                        <!-- Parent comment-->
+                                        <div class="flex-shrink-0"><img class="rounded-circle" src="img/1009-50x50.jpg"
+                                                alt="..." /></div>
+                                        <div class="ms-3">
+                                            <div class="fw-bold">کاربری خندان</div>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                            طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                                            لازم است؟
+                                            <!-- Child comment 1-->
+                                            <div class="d-flex mt-4">
+                                                <div class="flex-shrink-0"><img class="rounded-circle"
+                                                        src="img/257-50x50.jpg" alt="..." /></div>
+                                                <div class="ms-3">
+                                                    <div class="fw-bold">ادمین سایت</div>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است.
+                                                </div>
+                                            </div>
+                                            <!-- Child comment 2-->
+                                            <div class="d-flex mt-4">
+                                                <div class="flex-shrink-0"><img class="rounded-circle"
+                                                        src="img/367-50x50.jpg" alt="..." /></div>
+                                                <div class="ms-3">
+                                                    <div class="fw-bold">حض بیگ</div>
+                                                    آفرین ادمین، جواب درستی دادی به کاربر خندان:)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single comment-->
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0"><img class="rounded-circle" src="img/1009-50x50.jpg"
+                                                alt="..." /></div>
+                                        <div class="ms-3">
+                                            <div class="fw-bold">کاربر خندان</div>
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock first_row %}
+
