@@ -9,6 +9,7 @@ app_name = 'url'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home_page.urls'), name= 'home'),
+    path('about', include('about_page.urls'), name= 'about'),
 ]
 
 if settings.DEBUG:
