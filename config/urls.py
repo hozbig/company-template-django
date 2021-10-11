@@ -14,6 +14,7 @@ urlpatterns = [
     path('pricing', include('pricing_page.urls'), name= 'pricing'),
     path('faq', include('faq_page.urls'), name= 'faq'),
     path('blog', include('blog.urls'), name= 'blog'),
+    path('portfolio', include('portfolio.urls'), name= 'portfolio'),
 ]
 
 if settings.DEBUG:

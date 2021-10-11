@@ -1,0 +1,55 @@
+{% extends 'bases/base-templates.html' %}
+{% load static %}
+
+        <!-- Page Content-->
+        {% block first_row %}
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder">کار های ما</h1>
+                    <p class="lead fw-normal text-muted mb-0">نمونه کار های شرکت</p>
+                </div>
+                <div class="row gx-5">
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-5">
+                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/7-600x400.jpg' %}"
+                                alt="..." />
+                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">اولین پروژه</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-5">
+                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/29-600x400.jpg' %}"
+                                alt="..." />
+                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">دومین پروژه</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/733-600x400.jpg' %}"
+                                alt="..." />
+                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">سومین پروژه</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/668-600x400.jpg' %}"
+                                alt="..." />
+                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">چهارمین پروژه</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock first_row %}
+
+        <!-- Ready to Work Button -->
+        {% block second_row %}
+        <section class="py-5 bg-light">
+            <div class="container px-5 my-5">
+                <h2 class="display-4 fw-bolder mb-4">برای همکاری با ما آماده اید؟</h2>
+                <a class="btn btn-lg btn-primary" href="#!">تماس بگیرید</a>
+            </div>
+        </section>
+        {% endblock second_row %}
+

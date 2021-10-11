@@ -1,0 +1,47 @@
+{% extends 'bases/base-templates.html' %}
+{% load static %}
+
+        <!-- Page Content-->
+        {% block first_row %}
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-5">
+                            <h1 class="fw-bolder">چهارمین پروژه</h1>
+                            <p class="lead fw-normal text-muted mb-0">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                                تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-5">
+                    <div class="col-12"><img class="img-fluid rounded-3 mb-5" src="{% static 'img/655-1300x700.jpg' %}" alt="..." />
+                    </div>
+                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="{% static 'img/668-600x400.jpg' %}" alt="..." />
+                    </div>
+                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="{% static 'img/29-600x400.jpg' %}" alt="..." />
+                    </div>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center mb-5">
+                            <p class="lead fw-normal text-muted">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                                تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی
+                                در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                            </p>
+                            <a class="text-decoration-none" href="#!">
+                                مشاهده پروژه
+                                <i class="bi-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock first_row %}
+

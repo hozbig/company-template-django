@@ -47,11 +47,11 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="{% url 'portfolio_app:portfolio_home_url' %}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">نمونه کارها</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                <li><a class="dropdown-item" href="portfolio-overview.html">لیست نمونه کارها</a></li>
-                                <li><a class="dropdown-item" href="portfolio-item.html">نمومه کار</a></li>
+                                <li><a class="dropdown-item" href="{% url 'portfolio_app:portfolio_home_url' %}">لیست نمونه کارها</a></li>
+                                <li><a class="dropdown-item" href="{% url 'portfolio_app:portfolio_post_url' %}">نمومه کار</a></li>
                             </ul>
                         </li>
                     </ul>
