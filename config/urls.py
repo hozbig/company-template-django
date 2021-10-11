@@ -12,6 +12,7 @@ urlpatterns = [
     path('about', include('about_page.urls'), name= 'about'),
     path('contact', include('contact_page.urls'), name= 'contact'),
     path('pricing', include('pricing_page.urls'), name= 'pricing'),
+    path('faq', include('faq_page.urls'), name= 'faq'),
 ]
 
 if settings.DEBUG:
