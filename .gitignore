@@ -1,0 +1,8 @@
+# uncomment while deploying
+venv/
+.idea/
+# /db.sqlite3
+# static_cdn/
+public/
+tmp/
+# assets/
