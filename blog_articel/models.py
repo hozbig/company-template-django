@@ -1,4 +1,5 @@
 from django.db import models
+from extensions.myUtilsForJalali import jalali_convertor
 
 # Create your models here.
 class Article(models.Model):
@@ -29,3 +30,11 @@ class Article(models.Model):
 
     def __str__(self):
         return f"{self.id}.{self.title}"
+
+    # TIME CONVERTOR TO JALALI FORMAT:
+    def j_created_time(self):
+        return jalali_convertor(self.created_time, lang_format="en", time_status="on")
+    j_created_time.short_description = "created_time"
+    def j_publish_time(self):
+        return jalali_convertor(self.publish_time)
+    j_publish_time.short_description = "published_time"
