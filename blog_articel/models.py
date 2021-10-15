@@ -1,4 +1,5 @@
 from django.db import models
+from blog_category.models import Category
 from extensions.myUtilsForJalali import jalali_convertor
 
 # Create your models here.
@@ -9,6 +10,7 @@ class Article(models.Model):
     text = models.TextField(null=True, blank=True, )
     image = models.ImageField(upload_to="articles-image/", null=True, blank=False, )
     time_for_read = models.IntegerField(default=5)
+    category = models.ManyToManyField(Category, related_name="category_rel_name")
     # category = models.ManyToManyField(Category, , related_name="papers")
 
     # RESOURCE:
