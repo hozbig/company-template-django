@@ -4,17 +4,26 @@ from blog_articel.models import Article
 
 # blog_home view
 def blog_home_view(request):
-    articeles = Article.objects.all().filter(suggest=True)
+    articeles = Article.objects.all().filter(suggest=True)[:3]
+    last_articel = Article.objects.all()
     context = {
         "page_title": "وبلاگ",
         'articeles': articeles,
+        'last_articel': last_articel[len(last_articel)-1:],
     }
     return render(request, 'blog/blog-home.html', context)
 
 
 # blog_post view
-def blog_post_view(request):
+def blog_post_view(request, slug):
+    try:
+        articel = Article.objects.all().get(slug=slug)
+        templateName = 'blog/blog-post.html'
+    except:
+        articel = None
+        templateName = "blog/blog-post.html"
     context = {
         "page_title": "پست",
+        "articel": articel,
     }
-    return render(request, 'blog/blog-post.html', context)
+    return render(request, templateName, context)
