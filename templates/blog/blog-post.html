@@ -6,6 +6,7 @@
         <section class="py-5">
             <div class="container px-5 my-5">
                 <div class="row gx-5">
+                    <!--writer informations-->
                     <div class="col-lg-3">
                         <div class="d-flex align-items-center mt-lg-5 mb-4">
                             <img class="img-fluid rounded-circle" src="{% static 'img/1009-50x50.jpg' %}" alt="..." />
@@ -21,36 +22,19 @@
                             <!-- Post header-->
                             <header class="mb-4">
                                 <!-- Post title-->
-                                <h1 class="fw-bolder mb-1">تیتر مقاله در اینجا قرار میگیرد!</h1>
+                                <h1 class="fw-bolder mb-1">{{articel.title}}</h1>
                                 <!-- Post meta content-->
-                                <div class="text-muted fst-italic mb-2">۱۴۰۰/۶/۶</div>
+                                <div class="text-muted fst-italic mb-2">{{articel.j_publish_time}}</div>
                                 <!-- Post categories-->
-                                <a class="badge bg-secondary text-decoration-none link-light" href="#!">طراحی وب</a>
-                                <a class="badge bg-secondary text-decoration-none link-light" href="#!">بهترین
-                                    انتخاب</a>
+                                {% for cat in articel.category.all %}
+                                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{cat}}</a>
+                                {% endfor %}
                             </header>
                             <!-- Preview image figure-->
-                            <figure class="mb-4"><img class="img-fluid rounded" src="{% static 'img/575-900x400.jpg' %}" alt="..." />
+                            <figure class="mb-4"><img class="img-fluid rounded" src="{{articel.image.url}}" alt="{{articel.image.name}}" />
                             </figure>
                             <!-- Post content-->
-                            <section class="mb-5">
-                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-                                    که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز .</p>
-                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-                                    که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
-                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-                                    که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-                                    ابزارهای کاربردی می باشد </p>
-                                <h2 class="fw-bolder mb-4 mt-5">لورم ایپسوم متن ساختگی با تولید سادگی </h2>
-                                <p class="fs-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-                                    سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با
-                                    هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و
-                                    آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
-                            </section>
+                            <section class="mb-5"> {{articel.text}} </section>
                         </article>
                         <!-- Comments section-->
                         <section>

@@ -21,7 +21,7 @@
                                         <p>
                                         {{item.text|truncatechars:200}}
                                         </p>
-                                        <a class="stretched-link text-decoration-none" href="#!">
+                                        <a class="stretched-link text-decoration-none" href="{% url 'blog_app:blog_post_url' item.slug %}">
                                             ادامه مطلب
                                             <i class="bi bi-arrow-left"></i>
                                         </a>
@@ -50,7 +50,7 @@
                         {% for item in articeles %}
                             <div class="mb-4">
                                 <div class="small text-muted">{{item.j_publish_time}}</div>
-                                <a class="link-dark" href="#!">
+                                <a class="link-dark" href="{% url 'blog_app:blog_post_url' item.slug %}">
                                     <h3>{{item.text|truncatechars:90}}</h3>
                                 </a>
                             </div>
@@ -106,7 +106,7 @@
                                         {{cat}}
                                     </div>
                                 {% endfor %}
-                                <a class="text-decoration-none link-dark stretched-link" href="#!">
+                                <a class="text-decoration-none link-dark stretched-link" href="{% url 'blog_app:blog_post_url' item.slug %}">
                                     <div class="h5 card-title mb-3">{{ item.title }}</div>
                                 </a>
                                 <p class="card-text mb-0">
