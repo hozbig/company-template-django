@@ -4,7 +4,7 @@ from blog_articel.models import Article
 
 # blog_home view
 def blog_home_view(request):
-    articeles = Article.objects.all().filter(suggest=True)[:3]
+    articeles = Article.objects.all().order_by("-created_time").filter(suggest=True)[:3]
     last_articel = Article.objects.all()
     context = {
         "page_title": "وبلاگ",
