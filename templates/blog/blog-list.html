@@ -1,0 +1,45 @@
+{% extends 'bases/base-templates.html' %}
+{% load static %}
+
+        <!-- News Content -->
+        {% block first_row %}
+        <section class="py-5 bg-light">
+            <div class="container px-5">
+                <div class="row gx-5">
+                    <div class="col-xl-8">
+                        <h2 class="fw-bolder fs-5 mb-4">آخرین مقالات</h2>
+                        <!-- News item-->
+                        {% for item in articeles %}
+                            <div class="mb-4">
+                                <div class="small text-muted">{{item.j_publish_time}}</div>
+                                <a class="link-dark" href="{% url 'blog_app:blog_post_url' item.slug %}">
+                                    <h3>{{item.text|truncatechars:90}}</h3>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card border-0 h-100">
+                            <div class="card-body p-4">
+                                <div class="d-flex h-100 align-items-center justify-content-center">
+                                    <div class="text-center">
+                                        <div class="h6 fw-bolder">تماس باما</div>
+                                        <p class="text-muted mb-4">
+                                            با ما در تماس باشید در:
+                                            <br />
+                                            <a href="#!">press@domain.com</a>
+                                        </p>
+                                        <div class="h6 fw-bolder">و مارا دنبال کنید</div>
+                                        <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-twitter"></i></a>
+                                        <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-facebook"></i></a>
+                                        <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-linkedin"></i></a>
+                                        <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock first_row %}

@@ -23,7 +23,16 @@ def blog_post_view(request, slug):
         articel = None
         templateName = "blog/blog-post.html"
     context = {
-        "page_title": "پست",
+        "page_title": articel.title,
         "articel": articel,
     }
     return render(request, templateName, context)
+
+# blog_list view
+def blog_list_view(request):
+    articeles = Article.objects.all().order_by("-created_time")
+    context = {
+        "page_title": "لیست مقالات",
+        'articeles': articeles,
+    }
+    return render(request, 'blog/blog-list.html', context)
