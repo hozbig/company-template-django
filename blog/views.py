@@ -30,10 +30,8 @@ def blog_post_view(request, slug):
 
 # blog_list view
 def blog_list_view(request):
-    articeles = Article.objects.all().order_by("-created_time")
     context = {
         "page_title": "لیست مقالات",
-        'articeles': articeles,
     }
     return render(request, 'blog/blog-list.html', context)
 
