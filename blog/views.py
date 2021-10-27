@@ -37,9 +37,7 @@ def blog_list_view(request):
 
 # blog_list_suggests view
 def blog_list_suggests_view(request):
-    articeles = Article.objects.all().order_by("-created_time")
     context = {
         "page_title": "لیست مقالات ویژه",
-        'articeles': articeles,
     }
     return render(request, 'blog/blog-list-suggests.html', context)

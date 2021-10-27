@@ -72,6 +72,7 @@ TEMPLATES = [
             # from django 1.9 should load filter/tag in setting
             'libraries':{
                 'last_articeles_library': 'blog.templatetags.last_articeles',
+                'suggest_articeles_library': 'blog.templatetags.suggest_articeles',
 
             }
         },
