@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     # MY APPS:
     'blog_articel.apps.BlogArticelConfig',
-    'blog_category.apps.BlogCategoryConfig'
+    'blog_category.apps.BlogCategoryConfig',
+    'contact_page.apps.ContactPageConfig',
 ]
 
 MIDDLEWARE = [

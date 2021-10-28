@@ -15,73 +15,30 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6">
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <form id="contactForm" action="" method="post">
+                                {% csrf_token %}
                                 <!-- Name input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text"
-                                        placeholder="نام خود را وارد کنید..." data-sb-validations="required" />
+                                    {{form.full_name}}
                                     <label for="name">نام کامل</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">نام خود را وارد کنید
-                                    </div>
                                 </div>
                                 <!-- Email address input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                        data-sb-validations="required,email" style="font-family: system-ui;"/>
+                                    {{form.email}}
                                     <label for="email">آدرس ایمیل</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">ایمیل خود را وارد
-                                        کنید</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">ایمیل نا معتبر هست.
-                                    </div>
                                 </div>
                                 <!-- Phone number input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="09120001122"
-                                        data-sb-validations="required" style="font-family: system-ui;"/>
+                                    {{form.phone_number}}
                                     <label for="phone">شماره تلفن</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">شماره تلفن خود را
-                                        وارد کنید</div>
                                 </div>
                                 <!-- Message input-->
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text"
-                                        placeholder="Enter your message here..." style="height: 10rem"
-                                        data-sb-validations="required"></textarea>
+                                    {{form.message}}
                                     <label for="message">پیام شما</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">پیام خود را وارد
-                                        کنید</div>
-                                </div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder text-success">فرم با موفقیت ارسال شد.</div>
-
-                                        <!-- To activate this form, sign up at
-                                        <br />
-                                        <a
-                                            href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms
-                                        </a> -->
-                                    </div>
-                                </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage">
-                                    <div class="text-center text-danger mb-3">!!! فرم با موفقیت ارسال نشد !!!</div>
                                 </div>
                                 <!-- Submit Button-->
-                                <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton"
                                         type="submit">ارسال</button></div>
                             </form>
                         </div>
