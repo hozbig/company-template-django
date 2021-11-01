@@ -12,7 +12,6 @@ admin.site.register(FaqSubject, FaqSubjectAdmin)
 
 class FaqQuestionAdmin(admin.ModelAdmin):
     list_display = ["__str__", "question"]
-    ordering = ["subject"]
 
     class Meta():
         model = FaqSubject
