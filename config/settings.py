@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blog_category.apps.BlogCategoryConfig',
     'contact_page.apps.ContactPageConfig',
     'faq_page.apps.FaqPageConfig',
+    'portfolio.apps.PortfolioConfig',
 ]
 
 MIDDLEWARE = [
