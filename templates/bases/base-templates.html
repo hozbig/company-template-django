@@ -43,21 +43,22 @@
                                 disable dropdown for blog.
                                 ********active when create categories. [for developer]*********
                             -->
+                            <a class="nav-link text-white" href="{% url 'blog_app:blog_home_url' %}">بلاگ</a>
                             {% comment %} <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="{% url 'blog_app:blog_home_url' %}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">بلاگ</a> {% endcomment %}
-                            <a class="nav-link text-white" href="{% url 'blog_app:blog_home_url' %}">بلاگ</a>
                             {% comment %} <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
                                 <li><a class="dropdown-item" href="{% url 'blog_app:blog_home_url' %}">لیست مقالات</a></li>
                                 <li><a class="dropdown-item" href="{% url 'blog_app:blog_post_url' "slug" %}">مقاله</a></li>
                             </ul> {% endcomment %}
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="{% url 'portfolio_app:portfolio_home_url' %}" role="button"
+                            <a class="nav-link text-white" href="{% url 'portfolio_app:portfolio_home_url' %}">نمونه کارها</a>
+                            {% comment %} <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="{% url 'portfolio_app:portfolio_home_url' %}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">نمونه کارها</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                                 <li><a class="dropdown-item" href="{% url 'portfolio_app:portfolio_home_url' %}">لیست نمونه کارها</a></li>
-                                <li><a class="dropdown-item" href="{% url 'portfolio_app:portfolio_post_url' %}">نمومه کار</a></li>
-                            </ul>
+                                <li><a class="dropdown-item" href="">نمومه کار</a></li>
+                            </ul> {% endcomment %}
                         </li>
                     </ul>
                 </div>

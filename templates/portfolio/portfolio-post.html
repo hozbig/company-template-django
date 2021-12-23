@@ -8,36 +8,23 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
-                            <h1 class="fw-bolder">چهارمین پروژه</h1>
-                            <p class="lead fw-normal text-muted mb-0">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
-                                است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-                                تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                            </p>
+                            <h1 class="fw-bolder">{{portfolio.title}}</h1>
+                            <p class="lead fw-normal text-muted mb-0">{{portfolio.description1}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="row gx-5">
-                    <div class="col-12"><img class="img-fluid rounded-3 mb-5" src="{% static 'img/655-1300x700.jpg' %}" alt="..." />
+                    <div class="col-12"><img class="img-fluid rounded-3 mb-5" src="{{portfolio.image1.url}}" alt="{{portfolio.image1.name}}" />
                     </div>
-                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="{% static 'img/668-600x400.jpg' %}" alt="..." />
+                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="{{portfolio.image2.url}}" alt="{{portfolio.image2.name}}" />
                     </div>
-                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="{% static 'img/29-600x400.jpg' %}" alt="..." />
+                    <div class="col-lg-6"><img class="img-fluid rounded-3 mb-5" src="{{portfolio.image3.url}}" alt="{{portfolio.image3.name}}" />
                     </div>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
-                            <p class="lead fw-normal text-muted">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
-                                است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-                                تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی
-                                در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
-                            </p>
-                            <a class="text-decoration-none" href="#!">
-                                مشاهده پروژه
-                                <i class="bi-arrow-left"></i>
-                            </a>
+                            <p class="lead fw-normal text-muted">{{portfolio.description2}}</p>
                         </div>
                     </div>
                 </div>

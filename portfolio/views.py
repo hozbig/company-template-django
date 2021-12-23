@@ -1,17 +1,27 @@
 from django.shortcuts import render
+from .models import Portfolio
 
 
 # blog_home view
 def portfolio_home_view(request):
-    context = {
-        "page_title": "نمونه کارها",
-    }
-    return render(request, 'portfolio/portfolio-home.html', context)
+	portfolios = Portfolio.objects.all().filter(status = "p")
+	context = {
+		"page_title": "نمونه کارها",
+		"portfolios": portfolios,
+	}
+	return render(request, 'portfolio/portfolio-home.html', context)
 
 
 # portfolio_post view
-def portfolio_post_view(request):
-    context = {
-        "page_title": "نمونه",
-    }
-    return render(request, 'portfolio/portfolio-post.html', context)
+def portfolio_post_view(request, slug):
+	try:
+		portfolio = Portfolio.objects.all().get(slug=slug)
+		templateName = 'portfolio/portfolio-post.html'
+	except:
+		portfolio = None
+		templateName = "portfolio/portfolio-post.html"
+	context = {
+		"page_title": portfolio.title,
+		"portfolio": portfolio,
+	}
+	return render(request, templateName, context)

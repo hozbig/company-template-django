@@ -10,34 +10,15 @@
                     <p class="lead fw-normal text-muted mb-0">نمونه کار های شرکت</p>
                 </div>
                 <div class="row gx-5">
+                    {% for item in portfolios %}
                     <div class="col-lg-6">
                         <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/7-600x400.jpg' %}"
-                                alt="..." />
-                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">اولین پروژه</a>
+                            <img class="img-fluid rounded-3 mb-3" src="{{item.image1.url}}"
+                                alt="{{item.image1.name}}" />
+                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="{% url 'portfolio_app:portfolio_post_url' item.slug %}">{{item.title}}</a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/29-600x400.jpg' %}"
-                                alt="..." />
-                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">دومین پروژه</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="position-relative mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/733-600x400.jpg' %}"
-                                alt="..." />
-                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">سومین پروژه</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-3 mb-3" src="{% static 'img/668-600x400.jpg' %}"
-                                alt="..." />
-                            <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">چهارمین پروژه</a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
